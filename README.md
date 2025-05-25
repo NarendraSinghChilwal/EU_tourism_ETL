@@ -32,10 +32,10 @@ cd EU_tourism_ETL
 
 cp .env.example .env
 # Edit `.env`:
- • AWS_ACCESS_KEY_ID
- • AWS_SECRET_ACCESS_KEY
- • S3_BUCKET (e.g. s3a://your-eurostat-bucket)
- • POSTGRES_USER, POSTGRES_PASSWORD, POSTGRES_DB, POSTGRES_HOST, POSTGRES_PORT
+• AWS_ACCESS_KEY_ID
+• AWS_SECRET_ACCESS_KEY
+• S3_BUCKET (e.g. s3a://your-eurostat-bucket)
+• POSTGRES_USER, POSTGRES_PASSWORD, POSTGRES_DB, POSTGRES_HOST, POSTGRES_PORT
 
 
 ### 3. Stand Up Local Services
