@@ -63,6 +63,19 @@ EU_tourism_ETL/
 ```
 ---
 
+## 📊 Key Visualizations
+
+### Cluster Membership  
+![Cluster Membership](./Cluster_membership.png)
+
+### Cluster Trend Over Time  
+![Cluster Trend](./Cluster_trend.png)
+
+### Choropleth Map  
+![Tourism Choropleth Map](./Choropleth_Map.png)
+
+
+
 ## 📊 Key Findings
 
 - **Forecasting Accuracy**  
