@@ -11,56 +11,52 @@ An end-to-end fully automated data pipeline built with **Apache Airflow**, **Pap
 
 ## 📦 What’s Inside
 
-- **\`dags/\`** – Airflow DAG definition (`tourism_simple_pipeline.py`)  
-- **\`notebooks/\`** – Parameterized Jupyter notebooks (no outputs; run via Papermill)  
-- **\`docker-compose.yaml\`** – Brings up Airflow + PostgreSQL for local testing  
-- **\`requirements.txt\`** – Python dependencies  
-- **\`.env.example\`** – Template for credentials & connection settings  
-- **\`.gitignore\`** – Excludes secrets, outputs, venvs, DB files  
+- **`dags/`** – Airflow DAG definition (`tourism_simple_pipeline.py`)  
+- **`notebooks/`** – Papermill-parameterized Jupyter notebooks (no outputs)  
+- **`docker-compose.yaml`** – Brings up Airflow + PostgreSQL locally  
+- **`requirements.txt`** – Python dependencies  
+- **`.env.example`** – Template for AWS & Postgres credentials  
+- **`.gitignore`** – Excludes secrets, notebook outputs, venvs, DB files  
 
 ---
 
 ## 🚀 Quickstart
 
-### 1. Clone & Prepare
-
+```bash
 git clone https://github.com/NarendraSinghChilwal/EU_tourism_ETL.git
 cd EU_tourism_ETL
 
-
-### 2. Copy & Configure Environment
-
+# Copy & configure your credentials
 cp .env.example .env
-# Edit `.env`:
-• AWS_ACCESS_KEY_ID
-• AWS_SECRET_ACCESS_KEY
-• S3_BUCKET (e.g. s3a://your-eurostat-bucket)
-• POSTGRES_USER, POSTGRES_PASSWORD, POSTGRES_DB, POSTGRES_HOST, POSTGRES_PORT
+# → open `.env` and fill in:
+#    AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY,
+#    S3_BUCKET, POSTGRES_USER, POSTGRES_PASSWORD,
+#    POSTGRES_DB, POSTGRES_HOST, POSTGRES_PORT
 
-
-### 3. Stand Up Local Services
-
+# Stand up local services
 docker compose up --build
+```
 
 This launches:
-- **Postgres** on port 5432  
-- **Airflow webserver** on http://localhost:8080  
 
-Unpause the **\`tourism_simple_pipeline\`** DAG and trigger a run.
+Postgres on port 5432
 
+Airflow webserver on http://localhost:8080
+
+**Unpause the tourism_simple_pipeline DAG in Airflow and trigger a run.**
 ---
 
-## 🔍 Project Structure
+**🔍 Project Structure**
 
-
+```text
 EU_tourism_ETL/
 ├── dags/                    # Airflow DAG → tourism_simple_pipeline.py
 ├── notebooks/               # Papermill notebooks (no outputs)
 ├── docker-compose.yaml      # Local Airflow + Postgres setup
 ├── requirements.txt         # pip install -r requirements.txt
 ├── .env.example             # Copy to .env and fill in secrets
-└── .gitignore
-
+└── .gitignore               # Ignores secrets, outputs, venvs, DB files
+```
 ---
 
 ## 📊 Key Findings
