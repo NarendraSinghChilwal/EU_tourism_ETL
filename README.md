@@ -1,10 +1,10 @@
 # EU Tourism ETL Pipeline
 
-An end-to-end data pipeline built with **Apache Airflow**, **Papermill**, and **PySpark** that:
+An end-to-end fully automated data pipeline built with **Apache Airflow**, **Papermill**, and **PySpark** that:
 
 1. **Ingests** raw CSV tourism data (downloaded from [Eurostat](https://ec.europa.eu/eurostat)) stored in an S3 bucket  
 2. **Cleans**, transforms, and writes staging tables into PostgreSQL  
-3. **Aggregates**, **models**, **clusters**, and **visualizes** the data  
+3. **Aggregates**, **models**, **clusters**, and **visualizes** the data (Random Forest forecasting & K-means segmentation)  
 4. **Schedules** the entire flow daily via an Airflow DAG  
 
 ---
@@ -23,25 +23,25 @@ An end-to-end data pipeline built with **Apache Airflow**, **Papermill**, and **
 ## 🚀 Quickstart
 
 ### 1. Clone & Prepare
-\`\`\`bash
+
 git clone https://github.com/NarendraSinghChilwal/EU_tourism_ETL.git
 cd EU_tourism_ETL
-\`\`\`
+
 
 ### 2. Copy & Configure Environment
-\`\`\`bash
+
 cp .env.example .env
 # Edit `.env`:
-#   • AWS_ACCESS_KEY_ID
-#   • AWS_SECRET_ACCESS_KEY
-#   • S3_BUCKET (e.g. s3a://your-eurostat-bucket)
-#   • POSTGRES_USER, POSTGRES_PASSWORD, POSTGRES_DB, POSTGRES_HOST, POSTGRES_PORT
-\`\`\`
+ • AWS_ACCESS_KEY_ID
+ • AWS_SECRET_ACCESS_KEY
+ • S3_BUCKET (e.g. s3a://your-eurostat-bucket)
+ • POSTGRES_USER, POSTGRES_PASSWORD, POSTGRES_DB, POSTGRES_HOST, POSTGRES_PORT
+
 
 ### 3. Stand Up Local Services
-\`\`\`bash
+
 docker compose up --build
-\`\`\`
+
 This launches:
 - **Postgres** on port 5432  
 - **Airflow webserver** on http://localhost:8080  
@@ -52,7 +52,7 @@ Unpause the **\`tourism_simple_pipeline\`** DAG and trigger a run.
 
 ## 🔍 Project Structure
 
-\`\`\`
+
 EU_tourism_ETL/
 ├── dags/                    # Airflow DAG → tourism_simple_pipeline.py
 ├── notebooks/               # Papermill notebooks (no outputs)
@@ -60,7 +60,6 @@ EU_tourism_ETL/
 ├── requirements.txt         # pip install -r requirements.txt
 ├── .env.example             # Copy to .env and fill in secrets
 └── .gitignore
-\`\`\`
 
 ---
 
