@@ -2,7 +2,7 @@
 
 An end-to-end fully automated data pipeline built with **Apache Airflow**, **Papermill**, and **PySpark** that:
 
-1. **Ingests** raw CSV tourism data (downloaded from [Eurostat](https://ec.europa.eu/eurostat)) stored in an S3 bucket  
+1. **Ingests** raw CSV tourism data (downloaded from [Eurostat Tourism Database (English)](https://ec.europa.eu/eurostat/web/tourism/data/database?lang=en)) stored in an S3 bucket  
 2. **Cleans**, transforms, and writes staging tables into PostgreSQL  
 3. **Aggregates**, **models**, **clusters**, and **visualizes** the data (Random Forest forecasting & K-means segmentation)  
 4. **Schedules** the entire flow daily via an Airflow DAG  
