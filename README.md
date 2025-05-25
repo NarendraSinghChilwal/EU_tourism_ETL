@@ -9,7 +9,7 @@ An end-to-end fully automated data pipeline built with **Apache Airflow**, **Pap
 
 ## 🔄 Pipeline Overview
 
-![Airflow DAG graph](docs/Airflow_pipeline.png)
+![Airflow DAG graph](./Airflow_pipeline.png)
 
 ---
 
