@@ -1,0 +1,4 @@
+apache-airflow-providers-papermill
+papermill
+pyspark
+psycopg2-binary
