@@ -7,6 +7,10 @@ An end-to-end fully automated data pipeline built with **Apache Airflow**, **Pap
 3. **Aggregates**, **models**, **clusters**, and **visualizes** the data (Random Forest forecasting & K-means segmentation)  
 4. **Schedules** the entire flow daily via an Airflow DAG  
 
+## 🔄 Pipeline Overview
+
+![Airflow DAG graph](docs/Airflow_pipeline.png)
+
 ---
 
 ## 📦 What’s Inside
