@@ -1,0 +1,21 @@
+# Local environment file
+.env
+
+# Jupyter checkpoints & outputs
+**/.ipynb_checkpoints/
+notebooks/output/
+
+# Python artifacts
+__pycache__/
+*.py[cod]
+
+# Airflow DB & logs
+airflow.db
+logs/
+
+# Local virtualenvs
+airflow_venv/
+my_env/
+
+# Postgres data
+pgdata/
